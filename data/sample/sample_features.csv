@@ -1,0 +1,9 @@
+NDVI,NDWI,VV,VH,VH_VV,Stage,Label
+0.82,0.42,-10,-18,1.80,Vegetative,Healthy
+0.80,0.40,-11,-19,1.73,Tillering,Healthy
+0.75,0.36,-10,-17,1.70,Flowering,Healthy
+0.62,0.25,-8,-15,1.87,Flowering,Moderate_Stress
+0.50,0.20,-7,-13,1.86,Flowering,Moderate_Stress
+0.35,0.10,-6,-11,1.83,Grain_Filling,Stress
+0.30,0.08,-5,-10,2.00,Grain_Filling,Stress
+0.28,0.06,-5,-9,1.80,Grain_Filling,Stress

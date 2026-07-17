@@ -3,17 +3,16 @@ import pandas as pd
 # Load dataset
 data = pd.read_csv("data/sample/sample_features.csv")
 
+#Display dataset
 print("========== DATASET ==========")
 print(data)
 
-print("\n========== FIRST 5 ROWS ==========")
-print(data.head())
+# Separate Features (X) and Label (y)
+X = data.drop("Label",axis=1)
+y=data["Label"]
 
-print("\n========== SHAPE ==========")
-print(data.shape)
+print("\n========== FEATURES (X) ==========")
+print(X)
 
-print("\n========== COLUMN NAMES ==========")
-print(data.columns)
-
-print("\n========== DATA TYPES ==========")
-print(data.dtypes)
+print("\n========== LABELS (y) ==========")
+print(y)

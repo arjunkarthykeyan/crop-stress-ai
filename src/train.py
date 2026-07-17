@@ -1,18 +1,26 @@
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
 # Load dataset
 data = pd.read_csv("data/sample/sample_features.csv")
 
-#Display dataset
-print("========== DATASET ==========")
+# Create encoders
+stage_encoder = LabelEncoder()
+label_encoder = LabelEncoder()
+
+# Encode Stage column
+data["Stage"] = stage_encoder.fit_transform(data["Stage"])
+
+# Encode Label column
+data["Label"] = label_encoder.fit_transform(data["Label"])
+
+print("========== ENCODED DATASET ==========")
 print(data)
 
-# Separate Features (X) and Label (y)
-X = data.drop("Label",axis=1)
-y=data["Label"]
+print("\nStage Mapping:")
+for i, name in enumerate(stage_encoder.classes_):
+    print(f"{name} -> {i}")
 
-print("\n========== FEATURES (X) ==========")
-print(X)
-
-print("\n========== LABELS (y) ==========")
-print(y)
+print("\nLabel Mapping:")
+for i, name in enumerate(label_encoder.classes_):
+    print(f"{name} -> {i}")
